@@ -1,0 +1,63 @@
+												Insurance Policy Management
+		MySQL Schema
+
+		database name :- rllproject
+		
++----------------------+
+| Tables_in_rllproject |
++----------------------+
+| admin                |
+| answer               |
+| policy               |
+| question             |
+| user                 |
+| userpolicy           |
++----------------------+
+
+mysql> select * from admin;
++--------------------+----------+
+| emailid            | password |
++--------------------+----------+            
+| admin@gmail.com    | admin    |
+|
++--------------------+----------+
+
+mysql> select * from user;
++---------------------+-----------+
+| emailid             | password  |
++---------------------+-----------+
+| amanyadav@gmail.com | amanyadav |
+| lokesh@gmail.com    | lokesh    |
+| rahul@gmail.com     | rahul     |
++---------------------+-----------+
+
+mysql> select * from policy;;
++----------+--------+-----------------+-------------+----------------+
+| policyid | amount | category        | features    | policyname     |
++----------+--------+-----------------+-------------+----------------+
+|       45 |   5000 | health / yearly | good , nice | life insurance |
++----------+--------+-----------------+-------------+----------------+
+
+mysql> select * from userpolicy;
++--------+-------------+------------+----------------+---------+
+| userid | applieddate | name       | policyname     | status  |
++--------+-------------+------------+----------------+---------+
+|      1 | 2022-10-20  | aman yadav | life insurance | approve |
++--------+-------------+------------+----------------+---------+
+
+mysql> desc question;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| cid      | bigint       | NO   | PRI | NULL    | auto_increment |
+| question | varchar(255) | YES  |     | NULL    |                |
+| ans      | varchar(255) | YES  |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+
+mysql> desc answer;
++--------+--------------+------+-----+---------+----------------+
+| Field  | Type         | Null | Key | Default | Extra          |
++--------+--------------+------+-----+---------+----------------+
+| ansid  | bigint       | NO   | PRI | NULL    | auto_increment |
+| answer | varchar(255) | YES  |     | NULL    |                |
++--------+--------------+------+-----+---------+----------------+
